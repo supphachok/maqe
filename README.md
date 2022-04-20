@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I started with UI create every component from example test, in file index.css I divided into parts of section Defaul HTML values, Post, Options, Option and Button
 
-## Available Scripts
+#### Layout
 
-In the project directory, you can run:
+1. I use flex to responive screen when large screen I will show 2 columns when mobile screen I will show full content.
+2. Created image resonsive style by max-width and height.
+3. Created title and description of content.
+4. Created Options component with reset button.
+5. I map data option and text from data.json.
+6. Created style for Option button.
+7. Created price and actions button.
 
-### `npm start`
+# Functional
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. I using redux for manage my state.
+2. Created store and reducers.
+3. Filter part I created set_filter and clear_filter.
+4. Data part I created set_skus.
+5. Post component I mock to call function when mount into the component for loaded API.
+6. After loaded I will get price minimum and maximum from data then show to UI.
+7. If I have data I will show Options component.
+8. Options component I pass clear_filter to reset button.
+9. Then I map options to Option component.
+10. Into Option Component when click any button I have function handleFilter to set_filter and set_skus for set data and filter value.
+11. after that I check filterFocus from filterReducer and check data in store for disabled some data no value.
+12. when I click all of things we will show current value in left side.
