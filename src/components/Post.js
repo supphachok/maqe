@@ -8,6 +8,7 @@ import data from "../data.json"
 function Post() {
   const dispatch = useDispatch()
   const skus = useSelector((state) => state.skus)
+  const filter = useSelector((state) => state.filter)
 
   useEffect(() => {
     // Mock function for API
@@ -37,12 +38,14 @@ function Post() {
           alt="MAQE"
         />
 
-        {skus.length === 1 && (
-          <>
-            <h4>SKU Selecting</h4>
-            <code>{JSON.stringify(skus[0])}</code>
-          </>
-        )}
+        {skus.length === 1 &&
+          Object.keys(skus[0]?.variants).length ===
+            Object.keys(filter)?.length && (
+            <>
+              <h4>SKU Selecting </h4>
+              <code>{JSON.stringify(skus[0])}</code>
+            </>
+          )}
       </section>
       <section className="section">
         <h1 className="title">MAQE T-Shirt</h1>
